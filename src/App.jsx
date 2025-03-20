@@ -1,6 +1,24 @@
 import "./App.css";
 import avatar from "../src/assets/images/avatar-jessica.jpeg";
 
+const socialMedia = [
+  {
+    name: "Github",
+  },
+  {
+    name: "Frontend Mentor",
+  },
+  {
+    name: "X",
+  },
+  {
+    name: "LinkedIn",
+  },
+  {
+    name: "Instagram",
+  },
+];
+
 function App() {
   return (
     <main className="content">
@@ -12,11 +30,9 @@ function App() {
           <p className="description">"Frontend Developer and avid reader."</p>
         </div>
         <div className="cardSocial">
-          <button className="button">Github</button>
-          <button className="button">Frontend Mentor</button>
-          <button className="button">X</button>
-          <button className="button">LinkedIn</button>
-          <button className="button">Instagram</button>
+          {socialMedia.map((social) => (
+            <button className="button">{social.name}</button>
+          ))}
         </div>
       </div>
     </main>
